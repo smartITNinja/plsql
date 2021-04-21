@@ -1,6 +1,6 @@
 create or replace procedure z_jenkins_1
 as
 begin
-   htp.p('soy z_jenkins_1'); 
+   htp.p('soy z_jenkins_1 por rhadmin'); 
 end z_jenkins_1 ; 
 /
