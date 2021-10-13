@@ -1,7 +1,8 @@
-GIT_COMMIT='7ccd372734754875cd760be6923abc2f120dbad1'
-filesC=`git show --stat $GIT_COMMIT |grep  "+" |grep '|' |awk '{print $1}'` 
+GIT_COMMIT='ec95e9ef9a1843ef6f424b896b953b05a31c95f4'
 
-for file in `echo $filesC`
-do
-  echo "procesando: $file"
-done
+git diff-tree --no-commit-id --name-status -r $GIT_COMMIT --diff-filter=[AM]
+
+files=`git diff-tree --no-commit-id --name-status -r $GIT_COMMIT --diff-filter=[AM]|awk '{print $2}'`
+
+echo " "
+echo $files
