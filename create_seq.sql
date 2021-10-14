@@ -1,3 +1,0 @@
-#creaet seq
-
-#create seq
